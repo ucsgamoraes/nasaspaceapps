@@ -59,18 +59,11 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    public void RemoveItem(string itemName, int quantity)
+    public void RemoveOne(string itemName)
     {
         if (inventory.ContainsKey(itemName))
         {
-            inventory[itemName].quantity -= quantity;
-
-            if (inventory[itemName].quantity <= 0)
-            {
-                inventory.Remove(itemName);
-            }
-
-            UpdateInventoryUI();
+            inventory[itemName].quantity -= 1;
         }
     }
 
