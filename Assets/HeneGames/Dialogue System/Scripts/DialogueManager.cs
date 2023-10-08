@@ -162,6 +162,7 @@ namespace HeneGames.DialogueSystem
 
         private void OnTriggerExit(Collider other)
         {
+            return;
             //Try to find the "DialogueTrigger" component from the exiting collider
             if (other.gameObject.TryGetComponent<DialogueTrigger>(out DialogueTrigger _trigger))
             {
